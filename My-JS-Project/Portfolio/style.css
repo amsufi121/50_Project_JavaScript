@@ -1,0 +1,258 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+header {
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+nav a {
+  position: relative;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -5px;
+  background: yellow;
+  transition: width 0.3s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* ===== Image Pulse Effect ===== */
+.header-photo img {
+  transition: transform 0.3s ease;
+}
+
+.header-photo img:hover {
+  transform: scale(1.1) rotate(2deg);
+}
+
+/* ===== Section Fade-in on Scroll ===== */
+section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+}
+
+section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Typing effect */
+.typing {
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid yellow;
+  animation: typing 5s steps(50, end) forwards, blink 0.7s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: yellow;
+  }
+}
+
+header {
+  background: #2c1717;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+.header-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-text {
+  font-size: 18px;
+  max-width: 70%;
+}
+.header-photo img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%; /* makes it circular */
+  object-fit: cover;
+  border: 3px solid white;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: yellow;
+  border-bottom: 2px solid yellow;
+  padding-bottom: 3px;
+}
+
+section {
+  padding: 40px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+h2 {
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.skills li,
+.certifications li {
+  background: #f4f4f4;
+  margin: 5px;
+  padding: 8px;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+.contact {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 30px;
+}
+
+.contact a {
+  color: lightblue;
+  text-decoration: none;
+}
+
+.project,
+.experience,
+.education {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fafafa;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+/* From Uiverse.io by david-mohseni */
+.wrapper {
+  display: inline-flex;
+  list-style: none;
+  height: 120px;
+  width: 100%;
+  padding-top: 40px;
+  font-family: "Poppins", sans-serif;
+  justify-content: center;
+}
+
+.wrapper .icon {
+  position: relative;
+  background: #fff;
+  border-radius: 50%;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: #fff;
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #fff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+  background: #1877f2;
+  color: #fff;
+}
+
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+  background: #1da1f2;
+  color: #fff;
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background: #e4405f;
+  color: #fff;
+}
