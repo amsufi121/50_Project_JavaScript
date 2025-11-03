@@ -15,6 +15,7 @@
           <span id="min">00</span>
           <span>:</span>
           <span id="sec">00</span>
+          <span id="ampm">00</span>
         </div>
       </div>
     </div>
@@ -22,16 +23,22 @@
       let hrs = document.getElementById("hrs");
       let min = document.getElementById("min");
       let sec = document.getElementById("sec");
+      let shortclock = document.getElementById("ampm");
 
       setInterval(() => {
         let currentTime = new Date();
+        let hours = currentTime.getHours();
+        const ampm = hours >= 12 ? "PM" : "AM";
 
-        hrs.innerHTML =
-          (currentTime.getHours() < 10 ? "0" : "") + currentTime.getHours();
+        hours = hours % 12;
+        hours = hours ? hours : 12;
+
+        hrs.innerHTML = (currentTime.getHours() < 10 ? "0" : "") + hours;
         min.innerHTML =
           (currentTime.getMinutes() < 10 ? "0" : "") + currentTime.getMinutes();
         sec.innerHTML =
           (currentTime.getSeconds() < 10 ? "0" : "") + currentTime.getSeconds();
+        shortclock.innerHTML = ampm;
       }, 1000);
     </script>
   </body>
