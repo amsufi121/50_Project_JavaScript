@@ -6,5 +6,48 @@
     <title>Select Menu</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body></body>
+  <body>
+    <div class="hero">
+      <div class="selector">
+        <div id="selectField">
+          <p id="selectText">Select Social Media</p>
+          <img src="down-arrow.png" id="arrowIcon" />
+        </div>
+        <ul id="list" class="hide">
+          <li class="options">
+            <p>Facebook</p>
+          </li>
+          <li class="options">
+            <p>Instagram</p>
+          </li>
+          <li class="options">
+            <p>Whatsapp</p>
+          </li>
+          <li class="options">
+            <p>Twitter</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script>
+      var selectField = document.getElementById("selectField");
+      var selectText = document.getElementById("selectText");
+      var options = document.getElementsByClassName("options");
+      var list = document.getElementById("list");
+      var arrowIcon = document.getElementById("arrowIcon");
+
+      selectField.onclick = function () {
+        list.classList.toggle("hide");
+        arrowIcon.classList.toggle("rotate");
+      };
+
+      for (option of options) {
+        option.onclick = function () {
+          selectText.innerHTML = this.textContent;
+          list.classList.toggle("hide");
+          arrowIcon.classList.toggle("rotate");
+        };
+      }
+    </script>
+  </body>
 </html>
