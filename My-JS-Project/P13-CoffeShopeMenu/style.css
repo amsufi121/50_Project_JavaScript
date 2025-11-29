@@ -1,0 +1,141 @@
+/* ========================================
+    STARTER STYLES (Already provided)
+======================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #2c1810 0%, #1a0f0a 100%);
+  padding: 40px 20px;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.hero {
+  background: linear-gradient(rgba(44, 24, 16, 0.7), rgba(44, 24, 16, 0.7)),
+    url("https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1200")
+      center/cover;
+  padding: 80px 40px;
+  color: white;
+}
+
+.content {
+  padding: 60px 40px;
+}
+
+.menu-section {
+  margin-bottom: 50px;
+}
+
+.menu-item {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.menu-item:last-child {
+  border-bottom: none;
+}
+
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 8px;
+}
+
+.footer {
+  background: #2c1810;
+  padding: 40px;
+  color: white;
+  text-align: center;
+}
+
+/* ========================================
+  Complete the styles below!
+======================================== */
+
+/* TODO 1: Style the main heading "Brew & Bean" */
+.hero h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 64px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* TODO 2: Style the tagline "Artisan Coffee Since 2010" */
+.hero .tagline {
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+  line-height: 1.6;
+}
+
+/* TODO 3: Style the welcome message paragraph */
+.hero .welcome {
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* TODO 4: Style section headings (h2) */
+.menu-section h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 36px;
+  color: #2c1810;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* TODO 5: Style menu item names (h3) */
+.item-name {
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #2c1810;
+}
+
+/* TODO 6: Style the prices */
+.price {
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  color: #8b6f47;
+}
+
+/* TODO 7: Style menu item descriptions */
+.description {
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* TODO 8: Style the footer heading */
+.footer h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 28px;
+  text-transform: uppercase;
+}
+/* TODO 9: Style the footer text */
+.footer p {
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* TODO 10: Style the hours text with text-decoration: underline */
+.hours {
+  text-decoration: underline;
+}
